@@ -1,7 +1,7 @@
 # iLock
 This is the repository for our CAPSTONE project.
 # Team Members
-Shermal Marasinghe\n
+Shermal Marasinghe
 Steven Vu
 Gurarshdeep Singh
 Elochuwku BOC
