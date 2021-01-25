@@ -1,13 +1,12 @@
 Steven Vu
-OLED ?
+OLED
 
 Guru
-joystick/button?
+joystick/button
 
 Shermal/Elo
 
 Hardware:
 Raspberry pi
 Servo motor/lock
-Pushbutton
-LED? or 
+LED?
