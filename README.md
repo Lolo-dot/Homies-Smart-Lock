@@ -1,4 +1,4 @@
-# iLock
+# SmartLock
 This is the repository for our CAPSTONE project.
 # Team Members
 Shermal Marasinghe
