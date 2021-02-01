@@ -12,6 +12,5 @@ joystick/button
 Shermal/Elo
 
 Hardware:
-Raspberry pi
+Raspberry pi, 
 Servo motor/lock
-LED?
