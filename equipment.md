@@ -3,9 +3,10 @@
 + stm 32f103c  
 + st link v2
 
-Gurarshdeep Singh 
-Push-Button (https://www.badprog.com/electronics-stm32-using-the-push-button-to-switch-on-the-led6-on-the-stm32f3-discovery-board)
-using STM32 and ST Link V2
+#### Gurarshdeep Singh 
++ Push-Button (https://www.badprog.com/electronics-stm32-using-the-push-button-to-switch-on-the-led6-on-the-stm32f3-discovery-board)
++ STM32 
++ ST Link V2
 
 Shermal/Elo
 
