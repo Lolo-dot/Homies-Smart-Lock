@@ -6,7 +6,7 @@ Steven Vu
 Gurarshdeep Singh
 Elochuwku BOC
 # Distribution of work
-#### Steven Vu
+#### Steven Vu  
 Creating a remote OLED subsystem to display lock/unlock status.  
 Connection to an online database with the Smart Lock  
 Assisting on Blynk App development  
