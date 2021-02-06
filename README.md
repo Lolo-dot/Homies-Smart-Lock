@@ -1,10 +1,10 @@
 # Homies SmartLock
 This is the repository for our CAPSTONE project.
 ### Team Members
-Shermal Marasinghe
-Steven Vu
-Gurarshdeep Singh
-Elochuwku BOC
++ Shermal Marasinghe
++ Steven Vu
++ Gurarshdeep Singh
++ Elochuwku BOC - Ifeobu
 ### Distribution of work
 #### Steven Vu  
 + Creating a remote OLED subsystem to display lock/unlock status.  
