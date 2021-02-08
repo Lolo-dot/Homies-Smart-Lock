@@ -10,8 +10,8 @@
 + STM32 
 + ST Link V2
 
-Shermal/Elo
-
-Hardware:
-Raspberry pi, 
-Servo motor/lock
+#### Shermal/Elo
++ Raspberry Pi 3 Model B
++ Servo motor (https://www.adafruit.com/product/1142)
++ 1k Resistor
++ Breadboard
