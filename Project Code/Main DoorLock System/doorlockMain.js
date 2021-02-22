@@ -34,10 +34,8 @@ var unlockedState = 1000;
 var lockedState = 2200;
 
 var motorPin = 14;
-var buttonPin = 4
-var ledPin = 17
 
-var blynkToken = 'blynk_token_here';
+var blynkToken = '2bUf_aeciHGxk045pkFXgO9Le8S8IoXs';
 
 // *** Start code *** //
 
@@ -45,32 +43,18 @@ var locked = true
 
 //Setup servo
 var Gpio = require('pigpio').Gpio,
-  motor = new Gpio(motorPin, {mode: Gpio.OUTPUT}),
-  button = new Gpio(buttonPin, {
-    mode: Gpio.INPUT,
-    pullUpDown: Gpio.PUD_DOWN,
-    edge: Gpio.FALLING_EDGE
-  }),
-  led = new Gpio(ledPin, {mode: Gpio.OUTPUT});
-
+  motor = new Gpio(motorPin, {mode: Gpio.OUTPUT});
+  
 //Setup blynk
 var Blynk = require('blynk-library');
-var blynk = new Blynk.Blynk(blynkToken);
+var blynk = new Blynk.Blynk(blynkToken,
+  options= { addr:"blynk-cloud.com", port:443 }
+);
+//var blynk = new Blynk.Blynk(blynkToken);
 var v0 = new blynk.VirtualPin(0);
 
 console.log("locking door")
 lockDoor()
-
-button.on('interrupt', function (level) {
-	console.log("level: " + level + " locked: " + locked)
-	if (level == 0) {
-		if (locked) {
-			unlockDoor()
-		} else {
-			lockDoor()
-		}
-	}
-});
 
 v0.on('write', function(param) {
 	console.log('V0:', param);
@@ -88,7 +72,6 @@ blynk.on('disconnect', function() { console.log("DISCONNECT"); });
 
 function lockDoor() {
 	motor.servoWrite(lockedState);
-	led.digitalWrite(1);
 	locked = true
 
 	//notify
@@ -100,7 +83,6 @@ function lockDoor() {
 
 function unlockDoor() {
 	motor.servoWrite(unlockedState);
-	led.digitalWrite(0);
 	locked = false
 
 	//notify
