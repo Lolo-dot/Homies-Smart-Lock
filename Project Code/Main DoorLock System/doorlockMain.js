@@ -52,6 +52,8 @@ var blynk = new Blynk.Blynk(blynkToken,
 );
 //var blynk = new Blynk.Blynk(blynkToken);
 var v0 = new blynk.VirtualPin(0);
+var v1 = new blynk.VirtualPin(1);
+var terminal = new blynk.VirtualPin(2);
 
 console.log("locking door")
 lockDoor()
@@ -66,6 +68,17 @@ v0.on('write', function(param) {
   		blynk.notify("Door lock button was pressed with unknown parameter");
   	}
 });
+
+v1.on('write', function(param) {
+		if(param[0] == '1'){
+			terminal.write(getTemp());
+			console.log(getTemp());
+		}
+});
+
+/*terminal.on('write', function() {
+	terminal.write(getTemp());
+}); */
 
 blynk.on('connect', function() { console.log("Blynk ready."); });
 blynk.on('disconnect', function() { console.log("DISCONNECT"); });
@@ -90,4 +103,10 @@ function unlockDoor() {
 
   	//After 1.5 seconds, the door lock servo turns off to avoid stall current
   	setTimeout(function(){motor.servoWrite(0)}, 1500)
+}
+
+function getTemp() {
+	const execSync = require('child_process').execSync;
+	const output = execSync('vcgencmd measure_temp', { encoding: 'utf-8' });
+	return output;
 }
