@@ -53,7 +53,8 @@ var blynk = new Blynk.Blynk(blynkToken,
 //var blynk = new Blynk.Blynk(blynkToken);
 var v0 = new blynk.VirtualPin(0);
 var v1 = new blynk.VirtualPin(1);
-var terminal = new blynk.VirtualPin(2);
+//var terminal = new blynk.VirtualPin(2);
+var displayVal = new blynk.VirtualPin(3);
 
 console.log("locking door")
 lockDoor()
@@ -71,7 +72,8 @@ v0.on('write', function(param) {
 
 v1.on('write', function(param) {
 		if(param[0] == '1'){
-			terminal.write(getTemp());
+			displayVal.write(getTemp());
+			//terminal.write(getTemp());
 			console.log(getTemp());
 		}
 });
