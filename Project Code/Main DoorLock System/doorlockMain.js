@@ -54,13 +54,15 @@ var blynk = new Blynk.Blynk(blynkToken,
 var v0 = new blynk.VirtualPin(0);
 var v1 = new blynk.VirtualPin(1);
 //var terminal = new blynk.VirtualPin(2);
-var displayVal = new blynk.VirtualPin(3);
+var displayVal = new blynk.VirtualPin(3);	//To Display the Pi Temp
+var displayV0 = new blynk.VirtualPin(2);	//To Display the VO pin value
 
 console.log("locking door")
 lockDoor()
 
 v0.on('write', function(param) {
 	console.log('V0:', param);
+	displayV0.write(param);	//Writing the V0 pin value to the app
   	if (param[0] === '0') { //unlocked
   		unlockDoor()
   	} else if (param[0] === '1') { //locked
@@ -72,7 +74,7 @@ v0.on('write', function(param) {
 
 v1.on('write', function(param) {
 		if(param[0] == '1'){
-			displayVal.write(getTemp());
+			displayVal.write(getTemp());	//Writing the Pi Temp to the app
 			//terminal.write(getTemp());
 			console.log(getTemp());
 		}
