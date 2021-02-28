@@ -6,9 +6,14 @@
 + Breadboard and appropriate wiring
 
 #### Gurarshdeep Singh 
-+ Push-Button (https://www.badprog.com/electronics-stm32-using-the-push-button-to-switch-on-the-led6-on-the-stm32f3-discovery-board)
-+ STM32 
-+ ST Link V2
++ Raspberry Model 4B 2GB Ram
++   SD Card(32GB) for Raspberry OS and program
++   USB C cable
++   USB Ethernet Adapter
++   Ethernet Cable 
++ LED Light
++ 330 ohm Resistor
++ Breadboard
 
 #### Shermal/Elo
 + Raspberry Pi 3 Model B
