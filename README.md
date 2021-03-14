@@ -11,6 +11,6 @@ This is the repository for our CAPSTONE project.
 + Connection to an online database with the Smart Lock  
 + Assisting on Blynk App development  
 #### Gurarshdeep Singh
-+ Devloping a remote Push Button System to remotely lock or unlock the Smart Lock
++ Devloping a remote LED System to display lock or unlock status.
 + Direct Connection with real time database of Smart Lock
 + Working on Blynk App Development/Android App
