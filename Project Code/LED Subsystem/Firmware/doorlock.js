@@ -49,9 +49,9 @@ var Blynk = require('blynk-library');
 var blynk = new Blynk.Blynk(blynkToken,
   options= { addr:"blynk-cloud.com", port:443 }
 );
-//var blynk = new Blynk.Blynk(blynkToken);
+
 var v0 = new blynk.VirtualPin(0);
-//r v1 = new blynk.VirtualPin(1);
+
 
 
 console.log("locking door")
@@ -77,14 +77,9 @@ blynk.on('disconnect', function() { console.log("DISCONNECT"); });
 function lockDoor() {
 	locked = true
 
-	// Turning led off 
+	// Turning led on 
 	led.digitalWrite(0);
 	
-	// Send door is locked status
-	//v1.write("Locked");
-
-	//notify
-  	//blynk.notify("Door has been locked!");
   	
 }
 
@@ -93,11 +88,6 @@ function unlockDoor() {
 
 	// Turning led off 
 	led.digitalWrite(1);
-
-	// Send door is unlocked status
-	// v1.write("UnLocked");
-	//notify
-  	//blynk.notify("Door has been unlocked!"); 
 }
 
 
