@@ -47,9 +47,12 @@ var Gpio = require('pigpio').Gpio,
   
 //Setup blynk
 var Blynk = require('blynk-library');
-var blynk = new Blynk.Blynk(blynkToken,
-  options= { addr:"blynk-cloud.com", port:443 }
-);
+var blynk = new Blynk.Blynk(blynkToken,options = {
+	connector : new Blynk.TcpClient()
+});
+//var blynk = new Blynk.Blynk(blynkToken,
+//  options= { addr:"blynk-cloud.com", port: 443 }
+//);
 //var blynk = new Blynk.Blynk(blynkToken);
 var v0 = new blynk.VirtualPin(0);
 var v1 = new blynk.VirtualPin(1);
