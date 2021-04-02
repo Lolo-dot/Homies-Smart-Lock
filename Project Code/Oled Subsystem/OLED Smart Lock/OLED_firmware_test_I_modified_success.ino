@@ -84,7 +84,7 @@ static const unsigned char PROGMEM logo_bmp[] =
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-char auth[] = "2bUf_aeciHGxk045pkFXgO9Le8S8IoXs";//"0gdWBq9y8A34bYUgV5XthEu5UnpSAsqE";
+char auth[] = "AUTHENTICATION KEY HERE";
 
 // Attach virtual serial terminal to Virtual Pin V1
 WidgetTerminal terminal(V9);
