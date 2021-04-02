@@ -21,10 +21,9 @@ Uses the group authentication key and is on the same database as other component
 It is not a final product because this modifies virtual pin 0 (lock and unlock state) and virtual pin 2 (status of lock and unlock state). 
 In the future this should only read those values, not write them to the databse. 
 Super chart is working for "live" data range.
-
-
+  
 ##### OLED_firmware_final.ino
-Final OLED subsystem firmware as of April 2nd. Fixes include
--synced V0 pin value on boot 
--Read only for database values (lock unlock state)
--Welcome message  display not showing
+Final OLED subsystem firmware as of April 2nd. Fixes include  
+-synced V0 pin value on boot   
+-Read only for database values (lock unlock state)  
+-Welcome message  display not showing  
