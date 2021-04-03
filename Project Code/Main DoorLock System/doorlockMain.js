@@ -35,7 +35,7 @@ var lockedState = 2200;
 
 var motorPin = 14;
 
-var blynkToken = '2bUf_aeciHGxk045pkFXgO9Le8S8IoXs';
+var blynkToken = 'Enter your Blynk authentication code here';
 
 // *** Start code *** //
 
