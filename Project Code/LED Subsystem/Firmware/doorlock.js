@@ -33,7 +33,7 @@
 
 var ledPin = 18;
 
-var blynkToken = 'Enter_Your_Token_Here';
+var blynkToken = 'PUT_YOUR_AUTHENTICATION_CODE';
 
 // *** Start code *** //
 
@@ -46,12 +46,12 @@ var Gpio = require('pigpio').Gpio,
   
 //Setup blynk
 var Blynk = require('blynk-library');
-var blynk = new Blynk.Blynk(blynkToken,
-  options= { addr:"blynk-cloud.com", port:443 }
-);
-
+var blynk = new Blynk.Blynk(blynkToken, options= 
+	{ connector:new Blynk.TcpClient()
+  });
+//var blynk = new Blynk.Blynk(blynkToken);
 var v0 = new blynk.VirtualPin(0);
-
+//r v1 = new blynk.VirtualPin(1);
 
 
 console.log("locking door")
@@ -77,9 +77,14 @@ blynk.on('disconnect', function() { console.log("DISCONNECT"); });
 function lockDoor() {
 	locked = true
 
-	// Turning led on 
+	// Turning led off 
 	led.digitalWrite(0);
 	
+	// Send door is locked status
+	//v1.write("Locked");
+
+	//notify
+  	//blynk.notify("Door has been locked!");
   	
 }
 
@@ -88,6 +93,11 @@ function unlockDoor() {
 
 	// Turning led off 
 	led.digitalWrite(1);
+
+	// Send door is unlocked status
+	// v1.write("UnLocked");
+	//notify
+  	//blynk.notify("Door has been unlocked!"); 
 }
 
 
