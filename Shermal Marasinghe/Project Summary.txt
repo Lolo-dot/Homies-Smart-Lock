@@ -1,4 +1,4 @@
-The Homies Smart Lock project allows for the remote control of a household door lock using a mobile application connected over a database. 
+The Homies Smart Lock project allows for the remote control of a household door lock using a mobile application (developed on Blynk) connected over a database. 
 It is comprised of one primary system and two subsystems, all of which interact concurrently via a laptop internet connection to the Blynk database.  
 
 The primary system is built around a Raspberry Pi 3 and a servo motor to provide physical lock and unlock functionality.     
