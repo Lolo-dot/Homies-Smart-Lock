@@ -7,4 +7,4 @@ The LED subsystem is built around a Raspberry Pi 4 and an LED, reading values fr
 
 The OLED subsystem is built around a STM32 microcontroller and an OLED graphics display, reading values from the Blynk database to indicate the lock/unlock state of the primary system with graphical text. 
 
-Virtual capstone Homies Smart Lock Youtube link:
+Virtual capstone Homies Smart Lock Youtube link: https://www.youtube.com/watch?v=6IvCHmPuBF4&ab_channel=ShermalMarasinghe
